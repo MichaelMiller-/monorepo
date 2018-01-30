@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.premake": "lua",
+        "*.runsettings": "xml",
+        "*.h++": "cpp",
+        "*.ipp": "cpp"
+    }
+}
