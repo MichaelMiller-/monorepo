@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
 project(bin1 CXX)
 
+list(APPEND CMAKE_MODULE_PATH "../cmake")
+
 # set(BOOST_ROOT "../deps/boost_1_54_0")
 # set(BOOST_INCLUDEDIR "../deps/boost_1_54_0")
 # set(BOOST_LIBRARYDIR "../deps/boost_1_54_0")
