@@ -1,14 +1,11 @@
 cmake_minimum_required(VERSION 3.0)
 project(bin1 CXX)
 
-list(APPEND CMAKE_MODULE_PATH "../cmake")
+list(APPEND CMAKE_MODULE_PATH "cmake")
 
-# set(BOOST_ROOT "../deps/boost_1_54_0")
-# set(BOOST_INCLUDEDIR "../deps/boost_1_54_0")
-# set(BOOST_LIBRARYDIR "../deps/boost_1_54_0")
+set(CMAKE_CXX_STANDARD 14)
 
-# find_package(Boost 1.54.0 REQUIRED)
-# include_directories(${BOOST_INCLUDE_DIRS})
+## find_package(MonorepoLibs 1.54.0 REQUIRED)
 
 add_executable(${PROJECT_NAME} main.cpp)
 # target_link_libraries(${PROJECT_NAME} ${BOOST_LIBRARIES})
