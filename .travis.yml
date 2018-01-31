@@ -23,7 +23,7 @@ install:
 before_script:
   # show OS/compiler version
   - uname -a
-  - $CXX --version
+  ## - $CXX --version
 
 script:
   # compile and execute unit tests
