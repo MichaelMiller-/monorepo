@@ -1,21 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 project(monorepo CXX)
 
-##
-## add extern dependencies
-##
-# set(BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/deps/boost_1_54_0")
-# set(BOOST_INCLUDEDIR "${CMAKE_CURRENT_SOURCE_DIR}/deps/boost_1_54_0")
-# set(BOOST_LIBRARYDIR "${CMAKE_CURRENT_SOURCE_DIR}/deps/boost_1_54_0")
+# cmake .. -DCMAKE_TOOLCHAIN_FILE=C:\dev\vcpkg\scripts\buildsystems\vcpkg.cmake
 
-
-# if(UNIX)
-# 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
-# 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-long-long -Wno-reorder -pedantic -O3" )
-# endif()
+# set
 
 ## todo: available with cmake 3.1
-## set (CMAKE_CXX_STANDARD 11)
+## set(CMAKE_CXX_STANDARD 14)
 
 enable_testing()
 

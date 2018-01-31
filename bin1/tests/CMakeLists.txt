@@ -1,8 +1,9 @@
-
-list(APPEND CMAKE_MODULE_PATH "../cmake")
-
+## list(APPEND CMAKE_MODULE_PATH "../cmake")
 ## TODO: hardcoded path tp catch.hpp
-include_directories("../../deps")
+
+find_path(CATCH_INCLUDE_DIR catch.hpp)
+include_directories(${CATCH_INCLUDE_DIR})
+# include_directories("../../deps")
 
 function(test test)
    string(REPLACE "/" "_" tmp ${test})

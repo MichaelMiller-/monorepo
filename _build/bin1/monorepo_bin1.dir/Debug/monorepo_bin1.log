@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/dev/mm/monorepo/bin1/CMakeLists.txt
+  CMake does not need to re-run because C:/dev/mm/monorepo/_build/bin1/CMakeFiles/generate.stamp is up-to-date.
+  main.cpp
+  monorepo_bin1.vcxproj -> C:\dev\mm\monorepo\_build\bin1\Debug\monorepo_bin1.exe
+  monorepo_bin1.vcxproj -> C:/dev/mm/monorepo/_build/bin1/Debug/monorepo_bin1.pdb (Full PDB)
