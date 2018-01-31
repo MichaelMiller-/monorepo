@@ -13,16 +13,17 @@ matrix:
         apt:
           packages:
           - g++-5
-          - catch
+          ## - catch
           sources:
           - ubuntu-toolchain-r-test
 
 before_install:
   - export CXX="${COMPILER}"
+  ## https://docs.travis-ci.com/user/installing-dependencies/
   ## -qq for less output
-  ## - sudo apt-get -qq update
+  - sudo apt-get -qq update
   ## -y assume 'yes' as the answer
-  ## - sudo apt-get install -y catch
+  - sudo apt-get install -y catch
 
   ## docker support
   #- docker pull carlad/sinatra
