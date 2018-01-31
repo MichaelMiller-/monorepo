@@ -33,6 +33,6 @@ script:
   - mkdir -p _build && cd _build
   - cmake .. 
   - cmake --build . --config Release -- -j4
-  - ctest
+  - ctest -D Experimental
   - cd ..
 

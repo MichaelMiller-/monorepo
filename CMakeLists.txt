@@ -8,7 +8,7 @@ project(monorepo CXX)
 ## todo: available with cmake 3.1
 ## set(CMAKE_CXX_STANDARD 14)
 
-enable_testing()
+include(CTest)
 
 add_subdirectory(bin1)
 add_subdirectory(bin2)
