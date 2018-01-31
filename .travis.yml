@@ -1,5 +1,6 @@
 language: cpp
 dist: trusty
+sudo: enabled
 
 matrix:
   fast_finish: true
@@ -13,10 +14,10 @@ include:
         sources: ["ubuntu-toolchain-r-test"]
 
 before_install:
-  - apt-get install catch
   - export CXX="${COMPILER}"
 
 install:
+  - apt-get install catch
 
 before_script:
   # show OS/compiler version
