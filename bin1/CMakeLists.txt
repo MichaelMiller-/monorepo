@@ -9,35 +9,26 @@ configure_file (
   )
 include_directories("${PROJECT_BINARY_DIR}")
 
-
 list(APPEND CMAKE_MODULE_PATH "cmake")
 
 set(CMAKE_CXX_STANDARD 14)
 
-## find_package(MonorepoLibs 1.54.0 REQUIRED)
-
-#  find_package()
-
 add_executable(${PROJECT_NAME} main.cpp)
-# target_link_libraries(${PROJECT_NAME} ${BOOST_LIBRARIES})
-
-# add the install targets
-## install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 
 ##
 ## Tests
 ## 
-enable_testing()
+enable_testing()    ## TODO check if necessaery
 add_subdirectory(tests)
 
 ##
 ## CPack Boilerplate
 ##
-## set(CPACK_PACKAGE_VERSION "1.0.0")
+set(CPACK_PACKAGE_VERSION "${PROJECT_NAME}_VERSION_MAJOR.${PROJECT_NAME}_VERSION_MINOR.0")
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_NAME}_VERSION_MAJOR")
 set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_NAME}_VERSION_MINOR")
 set(CPACK_PACKAGE_VERSION_PATCH "0")
-set(CPACK_PACKAGE_VENDOR "vendr")
+set(CPACK_PACKAGE_VENDOR "vendor")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "${PROJECT_NAME} example")
 set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_CONTACT "schorsch")
