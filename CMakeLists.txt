@@ -4,6 +4,7 @@ project(monorepo CXX)
 set(CMAKE_CXX_STANDARD 14)
 
 include(CTest)
+## to disable testing set BUILD_TESTING to false
 
 add_subdirectory(bin1)
 add_subdirectory(bin2)

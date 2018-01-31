@@ -1,8 +1,0 @@
-# CMake generation dependency list for this directory.
-C:/dev/mm/monorepo/bin1/CMakeLists.txt
-C:/dev/mm/monorepo/bin1/version.config.h.in
-C:/Program Files/CMake/share/cmake-3.10/Modules/InstallRequiredSystemLibraries.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/CPack.cmake
-C:/Program Files/CMake/share/cmake-3.10/Modules/CPackComponent.cmake
-C:/Program Files/CMake/share/cmake-3.10/Templates/CPackConfig.cmake.in
-C:/Program Files/CMake/share/cmake-3.10/Templates/CPackConfig.cmake.in
