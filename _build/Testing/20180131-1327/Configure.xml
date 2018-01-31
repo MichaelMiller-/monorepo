@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-MSBuild"
+	BuildStamp="20180131-1327-Experimental"
+	Name="2016-34-MM"
+	Generator="ctest-3.10.1"
+	CompilerName="C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/cl.exe"
+	CompilerVersion="19.0.24215.1"
+	OSName="Windows"
+	Hostname="2016-34-mm"
+	OSRelease=" Professional"
+	OSVersion=" (Build 16299)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="14"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="18735"
+	TotalPhysicalMemory="16303"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2807"
+	>
+	<Configure>
+		<StartDateTime>Jan 31 14:27 W. Europe Standard Time</StartDateTime>
+		<StartConfigureTime>1517405272</StartConfigureTime>
+		<ConfigureCommand>"C:/Program Files/CMake/bin/cmake.exe" "C:/dev/mm/monorepo"</ConfigureCommand>
+		<Log>-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/dev/mm/monorepo/_build
+</Log>
+		<ConfigureStatus>0</ConfigureStatus>
+		<EndDateTime>Jan 31 14:27 W. Europe Standard Time</EndDateTime>
+		<EndConfigureTime>1517405273</EndConfigureTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Configure>
+</Site>

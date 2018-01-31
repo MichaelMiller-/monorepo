@@ -1,0 +1,57 @@
+Start testing: Jan 31 14:27 W. Europe Standard Time
+----------------------------------------------------------
+1/3 Testing: test.algo1
+1/3 Test: test.algo1
+Command: "C:/dev/mm/monorepo/_build/bin1/tests/Release/test.algo1.exe"
+Directory: C:/dev/mm/monorepo/_build/bin1/tests
+"test.algo1" start time: Jan 31 14:27 W. Europe Standard Time
+Output:
+----------------------------------------------------------
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test.algo1" end time: Jan 31 14:27 W. Europe Standard Time
+"test.algo1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: test.algo2
+2/3 Test: test.algo2
+Command: "C:/dev/mm/monorepo/_build/bin1/tests/Release/test.algo2.exe"
+Directory: C:/dev/mm/monorepo/_build/bin1/tests
+"test.algo2" start time: Jan 31 14:27 W. Europe Standard Time
+Output:
+----------------------------------------------------------
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test.algo2" end time: Jan 31 14:27 W. Europe Standard Time
+"test.algo2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: test.lib1
+3/3 Test: test.lib1
+Command: "C:/dev/mm/monorepo/_build/libs/lib1/tests/Release/test.lib1.exe"
+Directory: C:/dev/mm/monorepo/_build/libs/lib1/tests
+"test.lib1" start time: Jan 31 14:27 W. Europe Standard Time
+Output:
+----------------------------------------------------------
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"test.lib1" end time: Jan 31 14:27 W. Europe Standard Time
+"test.lib1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 31 14:27 W. Europe Standard Time

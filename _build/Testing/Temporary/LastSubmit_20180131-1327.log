@@ -1,0 +1,9 @@
+Upload files:
+0	Build.xml
+1	Configure.xml
+2	Test.xml
+Using drop method: http
+	Upload file: C:/dev/mm/monorepo/_build/Testing/20180131-1327/Build.xml to 2016-34-MM___Win32-MSBuild___20180131-1327-Experimental___XML___Build.xml
+	Upload file: C:/dev/mm/monorepo/_build/Testing/20180131-1327/Configure.xml to 2016-34-MM___Win32-MSBuild___20180131-1327-Experimental___XML___Configure.xml
+	Upload file: C:/dev/mm/monorepo/_build/Testing/20180131-1327/Test.xml to 2016-34-MM___Win32-MSBuild___20180131-1327-Experimental___XML___Test.xml
+   Submission successful
