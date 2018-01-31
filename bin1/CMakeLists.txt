@@ -22,9 +22,9 @@ add_subdirectory(tests)
 ##
 ## CPack Boilerplate
 ##
-set(CPACK_PACKAGE_VERSION "${PROJECT_NAME}_VERSION_MAJOR.${PROJECT_NAME}_VERSION_MINOR.0")
-set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_NAME}_VERSION_MAJOR")
-set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_NAME}_VERSION_MINOR")
+set(CPACK_PACKAGE_VERSION "1.0.0")
+set(CPACK_PACKAGE_VERSION_MAJOR "1")
+set(CPACK_PACKAGE_VERSION_MINOR "0")
 set(CPACK_PACKAGE_VERSION_PATCH "0")
 set(CPACK_PACKAGE_VENDOR "vendor")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "${PROJECT_NAME} example")
@@ -39,11 +39,10 @@ set(CPACK_GENERATOR WIX)
 ## package for apt-get (debian, ubunbtu)
 set(CPACK_GENERATOR "deb")
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.3.1-6), libgcc1 (>= 1:3.4.2-12)")
-set(CPACK_DEBIAN_PACKAGE_MAINTAINER "SOFiSTiK AG") # required
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "crazy maintainer") # required
 
 # build a CPack driven installer package
 include(InstallRequiredSystemLibraries)
 
-## build debian package
-# cpack --config CPackConfig.cmake -G DEB
+## build debian package: "cpack -G DEB"
 include(CPack)
