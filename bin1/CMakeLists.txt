@@ -11,8 +11,6 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 list(APPEND CMAKE_MODULE_PATH "cmake")
 
-set(CMAKE_CXX_STANDARD 14)
-
 add_executable(${PROJECT_NAME} main.cpp)
 
 ##

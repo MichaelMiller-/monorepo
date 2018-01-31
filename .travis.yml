@@ -4,31 +4,26 @@ dist: trusty
 matrix:
   fast_finish: true
 
-  include:
-#  - os: linux
-#    env: COMPILER=clang++-3.5
-#    addons:
-#      apt:
-#        packages: ["clang++-3.5"]
- #       sources: ['llvm-toolchain-precise-3.5', "ubuntu-toolchain-r-test"]
-
+include:
   - os: linux
     env: COMPILER=g++-5
     addons:
       apt:
-        packages: ["g++-5", "catch"]
+        packages: ["g++-5"]
         sources: ["ubuntu-toolchain-r-test"]
 
-before_script:
-
-install:
+before_install:
+  - apt-get install catch
   - export CXX="${COMPILER}"
 
-script:
+install:
+
+before_script:
   # show OS/compiler version
   - uname -a
   - $CXX --version
 
+script:
   # compile and execute unit tests
   - mkdir -p _build && cd _build
   - cmake .. 
@@ -36,3 +31,12 @@ script:
   - ctest -D Experimental
   - cd ..
 
+after_success:
+
+before_deploy:
+
+deploy:
+
+after_deploy:
+
+after_script: 
