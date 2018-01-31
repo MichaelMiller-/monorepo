@@ -1,5 +1,0 @@
-﻿  Building Custom Rule C:/dev/mm/monorepo/libs/lib1/tests/CMakeLists.txt
-  CMake does not need to re-run because C:/dev/mm/monorepo/_build/libs/lib1/tests/CMakeFiles/generate.stamp is up-to-date.
-  lib1.cpp
-  test.lib1.vcxproj -> C:\dev\mm\monorepo\_build\libs\lib1\tests\Debug\test.lib1.exe
-  test.lib1.vcxproj -> C:/dev/mm/monorepo/_build/libs/lib1/tests/Debug/test.lib1.pdb (Full PDB)

@@ -1,5 +1,0 @@
-﻿  Building Custom Rule C:/dev/mm/monorepo/bin1/tests/CMakeLists.txt
-  CMake does not need to re-run because C:/dev/mm/monorepo/_build/bin1/tests/CMakeFiles/generate.stamp is up-to-date.
-  algo2.cpp
-  test.algo2.vcxproj -> C:\dev\mm\monorepo\_build\bin1\tests\Debug\test.algo2.exe
-  test.algo2.vcxproj -> C:/dev/mm/monorepo/_build/bin1/tests/Debug/test.algo2.pdb (Full PDB)
