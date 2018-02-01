@@ -1,96 +1,57 @@
 language: cpp
 sudo: required
-
 services:
-  - docker
-
+- docker
 matrix:
-  ## fast_finish: true
   include:
-    - os: linux
-      env: COMPILER=g++-5
-      addons:
-        apt:
-          packages:
-          - g++-5
-          ## - catch
-          sources:
-          - ubuntu-toolchain-r-test
-
+  - os: linux
+    env: COMPILER=g++-5
+    addons:
+      apt:
+        packages:
+        - g++-5
+        sources:
+        - ubuntu-toolchain-r-test
 before_install:
-  - export CXX="${COMPILER}"
-  ## https://docs.travis-ci.com/user/installing-dependencies/
-  ## -qq for less output
-  - sudo apt-get -qq update
-  ## -y assume 'yes' as the answer
-  - sudo apt-get install -y catch
-
-  ## docker support
-  #- docker pull carlad/sinatra
-  #- docker run -d -p 127.0.0.1:80:4567 carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec foreman start;"
-  #- docker ps -a
-  #s- docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"  
-
-  ## Git LFS
-  ## - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
-  ## - git lfs pull
-
-install:
-
+- export CXX="${COMPILER}"
+- sudo apt-get -qq update
+- sudo apt-get install -y catch
+install: 
 before_script:
-  # show OS/compiler version
-  - uname -a
-  ## - $CXX --version
-
+- uname -a
 script:
-  # compile and execute unit tests
-  - mkdir -p _build && cd _build
-  - cmake .. 
-  - cmake --build . --config Release -- -j4
-  - ctest
-
+- mkdir -p _build && cd _build
+- cmake ..
+- cmake --build . --config Release -- -j4
+- ctest
 after_success:
-  - cpack -G DEB
-
+- cpack -G DEB
 before_deploy:
-  - git fetch --tags # necessary 
-
+- git fetch --tags
 deploy:
   provider: releases
-  api_key: 2e20b0cbe863a0da97335e9238ebff6bbc178faf
-  file: "monorepo_bin1-1.0.0-Linux.deb"
+  user: MichaelMiller-
+  file: monorepo_bin1-1.0.0-Linux.deb
   skip_cleanup: true
   on:
     all_branches: true
     tags: true
-
-after_deploy:
-
+  password:
+    secure: GnxiH5T6rHaRYe8jgVbfjV0cvTVqvxeoNyW/tr6Wbfp3681A6RH7rnGRF3wLNeVEnms0Q8crXVqKjvdwkSFL6Vjo77/YSJER3soCZljhaJJ/faP4FeiKqFKTBiGutqBt7EUm95mQ7k7+l7XCnXfuLKu5LTM6JUT/qLL2XnkUDBG5lYkydOXvV0WiEquV1ryOftd8jLuOTtQvMb3rGczbBTO4QqGEGPYst70yP77/dhm7M/3/PQFu/NCBq42kkkW0yf9YGBuktKh0K6PR8f37kqgeBF3jxV5FAPp8elW55pcybbk7RDmgkww9YcqyQ1W0JdJpCMnu9v31hbLLzKkbXWgDFGb9nh1jwk56PkApOdNZEDNCwwOzi7N96GxW33xaBo8CPBJp/fLPk1fJf33Ut/ytFvEJ7+XH4ovBuh3TkH+Uwu2Rn3w5jx93OABbX3oGwwxs+WrXWylP+H4zh5WSSzMCNnVbLTUZLqwWQHqXP7ERfURYxu4FreeSkuKBdEOSXs3wbXHT9BbzdyQ5bnUm8hu5yPsV43eX7OkNj3SQtbp2k9+csdgzlNKRI1tWSTdkQmQ6SMo6mvZStc89pHdIC6A2wm9+KthCivUq9J5VJXkCNVOUeTi0bQgP+n1c/fPJ8hVVpiYTJZNSxPWQag+AnekwWrNTSxZu49eWLTnYTdI=
+after_deploy: 
 after_script:
-  - echo "Deploying build $TRAVIS_BUILD_NUMBER"
-
+- echo "Deploying build $TRAVIS_BUILD_NUMBER"
 notifications:
   email:
     recipients:
-      - michael.miller@sofistik.de
-    on_success: never     # default: change
-    on_failure: always    # default: always
+    - michael.miller@sofistik.de
+    on_success: never
+    on_failure: always
   irc:
     channels:
-      - "chat.freenode.net#my-channel"
-      - "chat.freenode.net#some-other-channel"
+    - chat.freenode.net#my-channel
+    - chat.freenode.net#some-other-channel
     template:
-      - "%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
-      - "Change view : %{compare_url}"
-      - "Build details : %{build_url}"
-  #hipchat:
-    #rooms:
-#      - [api token]@[room id or name]
- #   template:
-  #    - '%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Change view</a>)'
-   # format: html
-
-# git tag -a 1.0.0 -m "tag message"
-# git push origin master --tags
-
-   
+    - "%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
+    - 'Change view : %{compare_url}'
+    - 'Build details : %{build_url}'
