@@ -57,7 +57,7 @@ before_deploy:
   # - git config --local user.name "MichaelMiller-"
   # - git config --local user.email "miller.michael@gmx.de"
   # - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-  - git tag -a 1.0 -m "first release"
+  - git tag -a 2.0 -m "second release"
 
 deploy:
   provider: releases
