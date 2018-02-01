@@ -66,11 +66,13 @@ deploy:
   file: "monorepo_bin1-1.0.0-Linux.deb"
   skip_cleanup: true
   on:
+    all_branches: true
     tags: true
 
 after_deploy:
 
-after_script: 
+after_script:
+  - echo "Deploying build $TRAVIS_BUILD_NUMBER"
 
 notifications:
   email:
