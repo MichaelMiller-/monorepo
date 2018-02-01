@@ -50,11 +50,37 @@ script:
   - ctest
 
 after_success:
+  - cpack -G DEB
 
 before_deploy:
+  # Setup git user name and tag this commit
+  - git config --local user.name "MichaelMiller-"
+  - git config --local user.email "miller.michael@gmx.de"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
 deploy:
+  provider: releases
+  api_key: bd0159d2dbf0a171882f
+  file: "monorepo_bin1-1.0.0-Linux.deb"
+  skip_cleanup: true
+  on:
+    tags: true
 
 after_deploy:
 
 after_script: 
+
+notifications:
+  email:
+    recipients:
+      - michael.miller@sofistik.de
+    on_success: never     # default: change
+    on_failure: always    # default: always
+  irc:
+    channels:
+      - "chat.freenode.net#my-channel"
+      - "chat.freenode.net#some-other-channel"
+    template:
+      - "%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
+      - "Change view : %{compare_url}"
+      - "Build details : %{build_url}"
