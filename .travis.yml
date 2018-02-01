@@ -53,7 +53,7 @@ after_success:
   - cpack -G DEB
 
 before_deploy:
-  ## - git fetch --tags ## TODO ehy
+  - git fetch --tags # necessary 
 
 deploy:
   provider: releases
@@ -89,3 +89,8 @@ notifications:
  #   template:
   #    - '%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Change view</a>)'
    # format: html
+
+# git tag -a 1.0.0 -m "tag message"
+# git push origin master --tags
+
+   
