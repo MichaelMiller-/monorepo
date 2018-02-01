@@ -53,16 +53,11 @@ after_success:
   - cpack -G DEB
 
 before_deploy:
-  # Setup git user name and tag this commit
-  # - git config --local user.name "MichaelMiller-"
-  # - git config --local user.email "miller.michael@gmx.de"
-  # - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-  # - git tag -a 3.0 -m "third release"
-  - git fetch --tags
+  ## - git fetch --tags ## TODO ehy
 
 deploy:
   provider: releases
-  api_key: bd0159d2dbf0a171882f
+  api_key: 2e20b0cbe863a0da97335e9238ebff6bbc178faf
   file: "monorepo_bin1-1.0.0-Linux.deb"
   skip_cleanup: true
   on:
