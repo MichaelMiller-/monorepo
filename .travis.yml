@@ -57,7 +57,8 @@ before_deploy:
   # - git config --local user.name "MichaelMiller-"
   # - git config --local user.email "miller.michael@gmx.de"
   # - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-  - git tag -a 3.0 -m "third release"
+  # - git tag -a 3.0 -m "third release"
+  - git fetch --tags
 
 deploy:
   provider: releases
